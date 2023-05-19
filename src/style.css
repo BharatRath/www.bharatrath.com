@@ -1,0 +1,35 @@
+@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Noto+Sans+Devanagari:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;400;500;600;700&display=swap');
+
+@tailwind components;
+@tailwind utilities;
+
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+.width {
+  width: 40%;
+}
+
+.brand-element {
+  flex-shrink: 0; /* Prevent child elements from shrinking */
+  width: 25%; /* Set a fixed width for child elements */
+  text-align: center; /* Center the text within child elements */
+  line-height: 100px; /* Vertically align the text within child elements */
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  max-height: 10vh; /* Set the max-height of the container to the desired image size */
+}
+
+.scroll-container img {
+  width: auto;
+  object-fit: contain;
+  margin: 0 20px;
+}
