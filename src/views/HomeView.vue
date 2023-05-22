@@ -501,7 +501,7 @@
     <Footer />
 </template>
 
-<script setup>
+<script setup lang="js">
 import Testimonials from './components/Testimonials.vue'
 import Footer from './components/Footer.vue'
 import ContactUs from './components/ContactUs.vue'

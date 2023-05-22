@@ -164,6 +164,6 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="js">
 const radioOPts = ['Farmer', 'Farmer Coperative', 'supplier', 'distributor', 'customer']
 </script>
