@@ -7,12 +7,14 @@ module.exports = {
         devanagari: ['Noto Sans Devanagari']
       },
       textColor: {
-        brandGreen: '#347571'
-      }
-      },
-      backgroundColor: {
-        brandGreen: '#5EC57E'
+        brandGreen: '#347571',
+        brandBg: '#dcefee'
       }
     },
-    plugins: [],
-  }
+    backgroundColor: {
+      brandGreen: '#5EC57E',
+      brandBg: '#dcefee'
+    }
+  },
+  plugins: []
+}
