@@ -13,8 +13,11 @@ module.exports = {
     },
     backgroundColor: {
       brandGreen: '#5EC57E',
-      brandBg: '#dcefee'
+      brandBg: '#dcefee',
+      brandGray: 'rgba(204, 204, 204, .7)',
+      white: 'white'
     }
   },
-  plugins: []
+
+  plugins: [require('daisyui')]
 }

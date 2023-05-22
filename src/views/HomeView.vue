@@ -1,4 +1,8 @@
 <template>
+ 
+    <Navbar /> 
+
+  <div class="!h-10"></div>
   <section class="banner pt-4 mb-10 bg-[#ECF8E5]">
     <div class="bg-[#ECF8E5] flex flex-col items-center p-4">
       <div class="flex flex-col items-center mt-4 mb-10">
@@ -72,7 +76,7 @@
       </div>
     </div>
   </section>
-  <div class="p-5">
+  <div class="p-5" id="features">
     <div class="font-devanagari text-brandGreen font-bold text-2xl m-5 text-center">
       भारतरथ का World Class Software, भारत के Businesses के लिए
     </div>
@@ -109,7 +113,7 @@
     </section>
   </div>
 
-  <section class="process mt-4 mb-20 p-5">
+  <section class="process mt-4 mb-20 p-5" id="onboarding">
     <div
       class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
     >
@@ -240,7 +244,7 @@
 
     </div>
 
-    <div class="mt-8 grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
         <div  class="flex   justify-between bg-white !h-24 mt-5">
           <img src="../assets/ecommerce/website.png" alt="" class="!object-contain !w-1/6 " />
@@ -346,7 +350,7 @@
 
 
     </div>
-    <div class="mt-8 grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
         <div  class="flex   justify-between bg-white !h-24 mt-5">
           <img  src="../assets/inventory/stock.png"  alt="" class="!object-contain !w-1/6 " />
@@ -501,10 +505,11 @@
     <Footer />
 </template>
 
-<script setup lang="js">
+<script setup >
 import Testimonials from './components/Testimonials.vue'
 import Footer from './components/Footer.vue'
 import ContactUs from './components/ContactUs.vue'
+import Navbar from './components/Navbar.vue'
 window.addEventListener('load', () => {
   const images = document.querySelectorAll('.scroll-container img')
   let minHeight = Infinity

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#ECF8E5] py-2">
+  <section class="bg-[#ECF8E5] p-5 !w-5/6 mx-auto rounded-lg">
     <div class="font-devanagari text-brandGreen font-bold text-4xl m-5 text-center">
       What our customers say
     </div>
@@ -34,7 +34,7 @@
   </section>
 </template>
 
-<script setup lang="js">
+<script setup>
 const slideItems = [
   {
     img: 'https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80',
