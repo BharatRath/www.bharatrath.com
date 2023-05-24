@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <p class="text-base text-brandGreen text-xl text-center">
+      <p class="text-base text-brandGreen text-center">
         &copy;Ashti Ventures Private Limited. All Rights Reserved.
       </p>
     </div>

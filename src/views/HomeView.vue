@@ -3,24 +3,29 @@
     <Navbar /> 
 
   <div class="!h-10"></div>
-  <section class="banner pt-4 mb-10 bg-[#ECF8E5]">
-    <div class="bg-[#ECF8E5] flex flex-col items-center p-4">
-      <div class="flex flex-col items-center mt-4 mb-10">
-        <div class="width flex justify-center mb-4"><img src="../assets/logo.svg" alt="" /></div>
-        <div><img src="../assets/logo_name.svg" alt="" /></div>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="../assets/banner_image.svg" alt="" class="mb-10" />
-        <div class="font-devanagari text-brandGreen font-bold text-3xl mb-4">
+  <section class="banner pt-4 mb-10 bg-[#ECF8E5]  ">
+    <div class="bg-[#ECF8E5] sm:py-5 py-5" >
+     <div class="grid grid-cols-1 md:grid-cols-2 !gap-6 lg:grid-cols-2 mx-auto max-w-screen-2xl px-4 py-16 ">
+        <div class="flex flex-col items-center  md:items-start  lg:items-start   mb-10">
+        <div class="width !mb-8 "><img src="../assets/flaticon.webp" alt="" /></div>
+       <div class="">
+          <div class="font-devanagari text-brandGree md:text-7xl  lg:text-7xl xl:text-7xl  text-3xl font-bold">
           आपका का Digital सारथी
         </div>
-        <div class="font-devanagari text-brandGreen text-l mb-4">
+        <div class="font-devanagari text-brandGreen md:text-4xl  lg:text-4xl xl:text-4xl  text-1xl  mt-4">
           अब मिनटों में अपने बिज़नेस को बनाये Digital
         </div>
+       </div>
+         
       </div>
-      <div class="font-devanagari text-brandGreen text-l flex flex-col items-center my-5 !text-2lg">
-        <div>e-Commerce | GST Billing | POS</div>
-        <div>Inventory Management | Digital Sales</div>
+      <div class="flex flex-col items-center">
+        <img src="../assets/banner_image.svg" alt="" class="sm:w-30 sm:h-30 sm:w-96 sm:h-96" />
+    
+      </div>
+     </div>
+        <div class="font-devanagari text-brandGreen md:text-2xl   lg:text-2xl xl:text-2xl  text-1xl flex flex-col items-center ">
+        <div  class="text-center">e-Commerce | GST Billing | POS | Inventory Management | Digital Sales</div>
+       
         <a
           class="rounded-full bg-brandGreen px-5 py-2 text-white font-bold mt-10"
           href="https://apps.bharatrath.com/bos/login"
@@ -35,9 +40,10 @@
   </section>
 
   <section class="brands mt-4 mb-20 p-5">
-    <div class="font-devanagari text-brandGreen font-bold text-2xl my-5 text-center">
+    <!-- <div class="font-devanagari text-brandGreen font-bold !sm:text-base  text-2xl my-5 text-center">
       भारत के Businesses का एक ही भरोसा
-    </div>
+    </div> -->
+    <Title :title="'भारत के Businesses का एक ही भरोसा'"/>
     <div class="slider">
       <div class="slide-track2">
         <div class="slide">
@@ -76,10 +82,11 @@
       </div>
     </div>
   </section>
-  <div class="p-5" id="features">
-    <div class="font-devanagari text-brandGreen font-bold text-2xl m-5 text-center">
+  <div class="p-5 " id="features">
+    <!-- <div class="font-devanagari text-brandGreen font-bold text-2xl m-5 text-center">
       भारतरथ का World Class Software, भारत के Businesses के लिए
-    </div>
+    </div> -->
+    <Title :des="'भारत के Businesses के लिए'" :title="'भारतरथ का World Class Softwar'"/>
     <section class="features mt-4 mb-20 bg-[#f7fdf3]">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <div class="bg-[#f7fdf3] flex flex-col items-center w-full">
@@ -226,10 +233,10 @@
   </section>
 
 
-
-<section id="e-Commerce_Website">
-  <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="text-center w-full text-brandGreen">
+<div class="bg-[#f7fdf3] ">
+  <section  id="e-Commerce_Website">
+  <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 ">
+    <!-- <div class="text-center w-full text-brandGreen">
      
         <h2 class="text-4xl font-bold t sm:text-5xl">
           e-Commerce Website
@@ -242,11 +249,11 @@
      
 
 
-    </div>
-
+    </div> -->
+  <Title :des="'आपका अपना Online Store भारतरथ के Best-in-Class E-Commerce Platform पर'" :title="'e-Commerce Website'"/>
     <div class="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div  class="flex   justify-between bg-white !h-24 mt-5">
+        <div  class="flex   justify-between  !h-24 mt-5">
           <img src="../assets/ecommerce/website.png" alt="" class="!object-contain !w-1/6 " />
       
           
@@ -259,7 +266,7 @@
        </div >
 
 
-         <div  class="flex   justify-between bg-white !h-24 mt-5">
+         <div  class="flex   justify-between  !h-24 mt-5">
           <img src="../assets/ecommerce/seo.png" alt="" class="!object-contain !w-1/6 " />
       
           
@@ -271,7 +278,7 @@
            </div>
        </div >
     
-          <div  class="flex   justify-between bg-white !h-24 mt-5">
+          <div  class="flex   justify-between  !h-24 mt-5">
           <img src="../assets/ecommerce/products.png" alt="" class="!object-contain !w-1/6 " />
       
           
@@ -283,7 +290,7 @@
            </div>
        </div >
   
-      <div  class="flex   justify-between bg-white !h-24 mt-5">
+      <div  class="flex   justify-between  !h-24 mt-5">
           <img src="../assets/ecommerce/analysis.png" alt="" class="!object-contain !w-1/6 " />
       
           
@@ -295,7 +302,7 @@
            </div>
        </div >
   
-          <div  class="flex   justify-between bg-white !h-24 mt-5">
+          <div  class="flex   justify-between  !h-24 mt-5">
           <img  src="../assets/ecommerce/cart.png"  alt="" class="!object-contain !w-1/6 " />
       
           
@@ -308,7 +315,7 @@
            </div>
        </div >
   
-        <div  class="flex   justify-between bg-white !h-24 mt-5">
+        <div  class="flex   justify-between  !h-24 mt-5">
           <img  src="../assets/ecommerce/service.png"  alt="" class="!object-contain !w-1/6 " />
       
           
@@ -324,19 +331,10 @@
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-<section class="bg-gray-100" id="Inventory_Management">
+<section class="bg-gray-100 " id="Inventory_Management">
   <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-
-    <div class="text-center w-full text-brandGreen">
+ <Title :des="'Complete Inventory Management जो आपको दे time saving, cost saving और efficiency'" :title="' Inventory Management'"/>
+    <!-- <div class="text-center w-full text-brandGreen">
      
         <h2 class="text-4xl font-bold t sm:text-5xl">
              Inventory Management
@@ -349,10 +347,10 @@
      
 
 
-    </div>
+    </div> -->
     <div class="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div  class="flex   justify-between bg-white !h-24 mt-5">
+        <div  class="flex   justify-between  !h-24 mt-5">
           <img  src="../assets/inventory/stock.png"  alt="" class="!object-contain !w-1/6 " />
       
           
@@ -367,7 +365,7 @@
   
 
       
-        <div  class="flex   justify-between bg-white !h-24 mt-5">
+        <div  class="flex   justify-between  !h-24 mt-5">
           <img  src="../assets/inventory/po.png"  alt="" class="!object-contain !w-1/6 " />
       
           
@@ -380,7 +378,7 @@
            </div>
        </div >
     
-             <div  class="flex   justify-between bg-white !h-24 mt-5">
+             <div  class="flex   justify-between  !h-24 mt-5">
           <img  src="../assets/inventory/inventory.png"  alt="" class="!object-contain !w-1/6 " />
       
           
@@ -393,7 +391,7 @@
            </div>
        </div >
      
-              <div  class="flex   justify-between bg-white !h-24 mt-5">
+              <div  class="flex   justify-between  !h-24 mt-5">
           <img src="../assets/inventory/admin.png"   alt="" class="!object-contain !w-1/6 " />
       
           
@@ -406,11 +404,11 @@
            </div>
        </div >
  
-           <div  class="flex   justify-between bg-white !h-24 mt-5">
+           <div  class="flex   justify-between  !h-24 mt-5">
           <img  src="../assets/inventory/barcode.png" alt="" class="!object-contain !w-1/6 " />
       
           
-          <div class=" flex flex-col  w-full ml-2">
+          <div class=" flex flex-col  w-full ml-4">
             <div class="text-xl font-bold">Barcode Labels & Scanning</div>
              <div>
           
@@ -420,7 +418,7 @@
        </div >
     
 
-             <div  class="flex   justify-between bg-white !h-24 mt-5">
+             <div  class="flex   justify-between  !h-24 mt-5">
           <img src="../assets/inventory/storage.png"  alt="" class="!object-contain !w-1/6 " />
       
           
@@ -437,6 +435,8 @@
     </div>
   </div>
 </section>
+
+</div>
 
 
 
@@ -510,6 +510,7 @@ import Testimonials from './components/Testimonials.vue'
 import Footer from './components/Footer.vue'
 import ContactUs from './components/ContactUs.vue'
 import Navbar from './components/Navbar.vue'
+import Title from './components/Title.vue'
 window.addEventListener('load', () => {
   const images = document.querySelectorAll('.scroll-container img')
   let minHeight = Infinity

@@ -1,43 +1,18 @@
 <template>
-  <form ref="form" @submit.prevent="sendEmail" id="contact">
-    <div>
+  <form ref="form" @submit.prevent="sendEmail">
+    <div class="bg-[#f7fdf3]">
       <div class="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5">
         <div class="bg-gray-100 text-gray-500 rounded-3xl w-full overflow-hidden">
-          <div class="font-devanagari text-brandGreen font-bold text-4xl m-5 text-center">
+          <!-- <div class="font-devanagari text-brandGreen font-bold text-4xl m-5 text-center">
             Contact Us
           </div>
           <div class="flex flex-col items-center">
             <div>We will always be happy to hear from you. To reach us on social media!</div>
-            <!-- 
-            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-              <li>
-                <a
-                  href="https://twitter.com/RealBharatrath"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  target="_blank"
-                >
-                  @Bharatrath </a
-                >on Twitter
-              </li>
-              <li>
-                <a
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  href="https://www.facebook.com/officialbharatrath/"
-                  target="_blank"
-                  >@Bharatrath </a
-                >on Facebook
-              </li>
-              <li>
-                <a
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  href="https://www.linkedin.com/company/bharatrath/"
-                  target="_blank"
-                  >@Bharatrath</a
-                >
-                on Linked In
-              </li>
-            </ul> -->
-          </div>
+          </div> -->
+          <Title
+            :des="'We will always be happy to hear from you. To reach us on social media'"
+            :title="'Contact'"
+          />
           <div class="md:flex w-full">
             <div class="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
               <iframe
@@ -47,14 +22,14 @@
               ></iframe>
             </div>
             <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
-              <div class="!text-lg">
+              <div class="!text-lg text-black">
                 <div class="!font-semibold">Send us a Message!</div>
                 We will always be happy to hear from you.
               </div>
               <br />
               <div v-if="!saving" class="">
                 <div class="px-3 mb-5">
-                  <label for="" class="text-base font-semibold">Name</label>
+                  <label for="" class="text-black text-base font-semibold">Name</label>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -69,7 +44,7 @@
                   </div>
                 </div>
                 <div class="px-3 mb-5">
-                  <label for="" class="text-base font-semibold px-1">Email</label>
+                  <label for="" class="text-black text-base font-semibold px-1">Email</label>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -85,7 +60,7 @@
                 </div>
 
                 <div class="w-full px-3 mb-5">
-                  <label for="" class="text-base font-semibold px-1">Who am I</label>
+                  <label for="" class="text-black text-base font-semibold px-1">Who am I</label>
                   <div class="flex flex-col">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -101,17 +76,15 @@
                         name="who_im"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label
-                        for="default-radio-1"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >{{ radio }}</label
-                      >
+                      <label for="default-radio-1" class="ml-2 text-sm font-medium text-black">{{
+                        radio
+                      }}</label>
                     </div>
                   </div>
                 </div>
 
                 <div class="px-3 mb-5">
-                  <label for="" class="text-base font-semibold px-1">Pincode</label>
+                  <label for="" class="text-black text-base font-semibold px-1">Pincode</label>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -127,7 +100,7 @@
                 </div>
 
                 <div class="px-3 mb-5">
-                  <label for="" class="text-base font-semibold px-1">Phone</label>
+                  <label for="" class="text-black text-base font-semibold px-1">Phone</label>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -143,10 +116,10 @@
                 </div>
 
                 <div class="px-3 mb-5">
-                  <label for="" class="text-base font-semibold px-1"> Message</label>
+                  <label for="" class="text-black text-base font-semibold"> Message</label>
                   <div class="flex">
                     <div
-                      class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
+                      class="w-10 z-10 pl-1 mt-3 text-center pointer-events-none flex items-center justify-center"
                     >
                       <i class="mdi mdi-account-outline text-gray-400 text-lg"></i>
                     </div>
@@ -160,13 +133,12 @@
                   </div>
                 </div>
 
-                <div>
-                  <button
+                <div class="flex !items-end">
+                  <input
                     type="submit"
-                    class="rounded-full px-4 py-2 !text-brandGreen bg-brandBg font-bold mt-10 w-full"
-                  >
-                    SEND MESSAGE
-                  </button>
+                    value="SEND MESSAGE"
+                    class="text-white px-4 py-2 !bg-brandGreen font-bold mt-10 w-full !cursor-pointer"
+                  />
                 </div>
               </div>
               <div
@@ -179,29 +151,13 @@
           </div>
         </div>
       </div>
-
-      <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
-        <div>
-          <a
-            title="Buy me a beer"
-            href="https://www.buymeacoffee.com/scottwindon"
-            target="_blank"
-            class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
-          >
-            <img
-              class="object-cover object-center w-full h-full rounded-full"
-              src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"
-            />
-          </a>
-        </div>
-      </div>
     </div>
   </form>
 </template>
 
 <script>
 import emailjs from '@emailjs/browser'
-
+import Title from './Title.vue'
 export default {
   data() {
     return {
@@ -210,11 +166,14 @@ export default {
       saving: false
     }
   },
-
+  components: {
+    Title
+  },
   methods: {
     sendEmail() {
+      debugger
       this.$refs.form.reset()
-      return true
+
       this.saving = true
       emailjs
         .sendForm('service_zcwceqj', 'template_16tua1x', this.$refs.form, '5aCh8vb8IqfuUz7P4')

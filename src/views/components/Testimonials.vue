@@ -1,22 +1,14 @@
 <template>
-  <section class="bg-[#ECF8E5] p-5 !w-5/6 mx-auto rounded-lg">
-    <div class="font-devanagari text-brandGreen font-bold text-4xl m-5 text-center">
+  <section class="p-5 py-7 mx-auto !-z-10">
+    <!-- <div class="font-devanagari text-brandGreen font-bold text-4xl m-5 text-center !rounded-2xl">
       What our customers say
-    </div>
+    </div> -->
+    <Title :title="' What our customers say'" />
     <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="swiper-container !overflow-hidden">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item in slideItems">
             <blockquote class="bg-gray-100 p-8">
-              <div class="flex items-center gap-4">
-                <img alt="pic" :src="item.img" class="h-16 w-16 rounded-full object-cover" />
-
-                <div class="text-sm">
-                  <p class="font-medium">{{ item.title }}</p>
-                  <p class="mt-1">{{ item.subTitle }}</p>
-                </div>
-              </div>
-
               <p class="relative mt-4 text-gray-500">
                 <span class="text-xl">&ldquo;</span>
 
@@ -24,6 +16,13 @@
 
                 <span class="text-xl">&rdquo;</span>
               </p>
+
+              <!-- <img alt="pic" :src="item.img" class="h-16 w-16 rounded-full object-cover" /> -->
+
+              <div class="text-center">
+                <p class="text-base font-semibold text-brandGreen">{{ item.title }}</p>
+                <p class="mt-1 text-sm">{{ item.subTitle }}</p>
+              </div>
             </blockquote>
           </div>
         </div>
@@ -35,6 +34,7 @@
 </template>
 
 <script setup>
+import Title from './Title.vue'
 const slideItems = [
   {
     img: 'https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80',
