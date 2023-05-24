@@ -155,7 +155,7 @@
   </form>
 </template>
 
-<script>
+<script lang="ts">
 import emailjs from '@emailjs/browser'
 import Title from './Title.vue'
 export default {

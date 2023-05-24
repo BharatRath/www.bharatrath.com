@@ -33,7 +33,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Title from './Title.vue'
 const slideItems = [
   {

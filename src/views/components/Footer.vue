@@ -26,7 +26,7 @@
     </div>
   </footer>
 </template>
-<script setup>
+<script setup lang="ts">
 const footerLinks = [
   {
     title: 'Navigation Links',
