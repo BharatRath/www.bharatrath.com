@@ -4,25 +4,30 @@
       What our customers say
     </div> -->
     <Title :title="' What our customers say'" />
-    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 gap-2">
       <div class="swiper-container !overflow-hidden">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="item in slideItems">
+          <div
+            class="swiper-slide !bg-[#dcf4ce] rounded-lg text-brandGreen"
+            v-for="item in slideItems"
+          >
             <blockquote class="bg-gray-100 p-8">
-              <p class="relative mt-4 text-gray-500">
-                <span class="text-xl">&ldquo;</span>
+              <p class="relative mt-4">
+                <span class="text-xl text-brandGreen">&ldquo;</span>
 
                 {{ item.desc }}
 
                 <span class="text-xl">&rdquo;</span>
               </p>
 
-              <!-- <img alt="pic" :src="item.img" class="h-16 w-16 rounded-full object-cover" /> -->
-
-              <div class="text-center">
-                <p class="text-base font-semibold text-brandGreen">{{ item.title }}</p>
-                <p class="mt-1 text-sm">{{ item.subTitle }}</p>
-              </div>
+              <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                  <div class="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</div>
+                  <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                    CEO at Google
+                  </div>
+                </div>
+              </figcaption>
             </blockquote>
           </div>
         </div>
@@ -33,26 +38,26 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import Title from './Title.vue'
 const slideItems = [
   {
     img: 'https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80',
     title: 'test',
     subTitle: 'subTitle',
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     img: 'https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80',
     title: 'test',
     subTitle: 'subTitle',
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     img: 'https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1832&q=80',
     title: 'test',
     subTitle: 'subTitle',
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   }
 ]
 document.addEventListener('DOMContentLoaded', function () {

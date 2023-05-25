@@ -29,7 +29,7 @@
               <br />
               <div v-if="!saving" class="">
                 <div class="px-3 mb-5">
-                  <label for="" class="text-black text-base font-semibold">Name</label>
+                  <div for="" class="text-black text-base font-semibold mb-2">Name</div>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -44,7 +44,7 @@
                   </div>
                 </div>
                 <div class="px-3 mb-5">
-                  <label for="" class="text-black text-base font-semibold px-1">Email</label>
+                  <div for="" class="text-black text-base font-semibold mb-2">Email</div>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="w-full px-3 mb-5">
-                  <label for="" class="text-black text-base font-semibold px-1">Who am I</label>
+                  <div for="" class="text-black text-base font-semibold mb-2">Who I am</div>
                   <div class="flex flex-col">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="px-3 mb-5">
-                  <label for="" class="text-black text-base font-semibold px-1">Pincode</label>
+                  <div for="" class="text-black text-base font-semibold mb-2">Pincode</div>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="px-3 mb-5">
-                  <label for="" class="text-black text-base font-semibold px-1">Phone</label>
+                  <div for="" class="text-black text-base font-semibold mb-2">Phone</div>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="px-3 mb-5">
-                  <label for="" class="text-black text-base font-semibold"> Message</label>
+                  <div for="" class="text-black text-base font-semibold mb-2">Message</div>
                   <div class="flex">
                     <div
                       class="w-10 z-10 pl-1 mt-3 text-center pointer-events-none flex items-center justify-center"
@@ -155,7 +155,7 @@
   </form>
 </template>
 
-<script lang="ts">
+<script>
 import emailjs from '@emailjs/browser'
 import Title from './Title.vue'
 export default {

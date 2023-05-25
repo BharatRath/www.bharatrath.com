@@ -1,11 +1,12 @@
 <template>
  
     <Navbar /> 
-
-  <div class="!h-10"></div>
-  <section class="banner pt-4 mb-10 bg-[#ECF8E5]  ">
-    <div class="bg-[#ECF8E5] sm:py-5 py-5" >
-     <div class="grid grid-cols-1 md:grid-cols-2 !gap-6 lg:grid-cols-2 mx-auto max-w-screen-2xl px-4 py-16 ">
+    <div class="!h-10"></div>
+ <Hero /> 
+  
+  <!-- <section class="banner  bg-[#ECF8E5] !md:pt-10 !lg:pt-10 !xl:pt-10 pt-5" >
+   <div class="sm:py-5 !py-7 pb-5 " >
+     <div class="grid grid-cols-1 md:grid-cols-2 !gap-6 lg:grid-cols-2 mx-auto !w-5/6 pb-12">
         <div class="flex flex-col items-center  md:items-start  lg:items-start   mb-10">
         <div class="width !mb-8 "><img src="../assets/flaticon.webp" alt="" /></div>
        <div class="">
@@ -23,7 +24,7 @@
     
       </div>
      </div>
-        <div class="font-devanagari text-brandGreen md:text-2xl   lg:text-2xl xl:text-2xl  text-1xl flex flex-col items-center ">
+        <div class="font-devanagari text-brandGreen md:text-2xl px-5  lg:text-2xl xl:text-2xl  text-1xl flex flex-col items-center ">
         <div  class="text-center">e-Commerce | GST Billing | POS | Inventory Management | Digital Sales</div>
        
         <a
@@ -32,12 +33,10 @@
           target="blank"
           >Start Now</a
         >
-        <!-- <button class="rounded-full bg-brandGreen px-4 py-2 text-white font-bold mt-10">
-          Start Now
-        </button> -->
+       
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="brands mt-4 mb-20 p-5">
     <!-- <div class="font-devanagari text-brandGreen font-bold !sm:text-base  text-2xl my-5 text-center">
@@ -87,7 +86,7 @@
       भारतरथ का World Class Software, भारत के Businesses के लिए
     </div> -->
     <Title :des="'भारत के Businesses के लिए'" :title="'भारतरथ का World Class Softwar'"/>
-    <section class="features mt-4 mb-20 bg-[#f7fdf3]">
+    <section class="features">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <div class="bg-[#f7fdf3] flex flex-col items-center w-full">
           <img src="../assets/features/website.png" alt="" class="p-5" />
@@ -157,9 +156,9 @@
       <div class="grid  lg:grid-cols-3 sm:grid-cols-2 gap-20">
         <div>
           <div class="flex items-center justify-between mb-6">
-            <p class="text-2xl font-bold">Sign Up</p>
+            <p class="text-2xl font-bold !text-brandGreen">Sign Up</p>
             <svg
-              class="w-6 text-gray-700 transform rotate-90 sm:rotate-0"
+              class="w-6 text-brandGreen transform rotate-90 sm:rotate-0"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
@@ -180,9 +179,9 @@
         </div>
         <div>
           <div class="flex items-center justify-between mb-6">
-            <p class="text-2xl font-bold">Onboarding</p>
+            <p class="text-2xl font-bold !text-brandGreen">Onboarding</p>
             <svg
-              class="w-6 text-gray-700 transform rotate-90 sm:rotate-0"
+              class="w-6 text-brandGreen transform rotate-90 sm:rotate-0"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
@@ -203,9 +202,9 @@
         </div>
         <div>
           <div class="flex items-center justify-between mb-6">
-            <p class="text-2xl font-bold">Go Live</p>
+            <p class="text-2xl font-bold !text-brandGreen">Go Live</p>
             <svg
-              class="w-6 text-gray-700 transform rotate-90 sm:rotate-0"
+              class="w-6 text-brandGreen transform rotate-90 sm:rotate-0"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
@@ -511,6 +510,7 @@ import Footer from './components/Footer.vue'
 import ContactUs from './components/ContactUs.vue'
 import Navbar from './components/Navbar.vue'
 import Title from './components/Title.vue'
+import Hero from './components/Hero.vue'
 window.addEventListener('load', () => {
   const images = document.querySelectorAll('.scroll-container img')
   let minHeight = Infinity
