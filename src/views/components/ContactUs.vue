@@ -120,22 +120,24 @@ export default {
   },
   methods: {
     sendEmail() {
-      debugger;
+
 
 
       this.saving = true;
+      //emailjs.sendForm("service_zcwceqj", "template_16tua1x", this.$refs.form, "5aCh8vb8IqfuUz7P4").then(
       emailjs.sendForm("service_fjsjr6m", "template_4m2irqk", this.$refs.form, "GZdvWFXQaYtk2G7oE").then(
 
         (result) => {
-          debugger;
-          this.saving = false;
+
           this.$refs.form.reset();
-          alert("SUCCESS!");
+
+          this.saving = false;
+
         },
         (error) => {
-          debugger;
+          ;
           this.saving = false;
-          alert("FAILED...");
+
         }
       );
     },
