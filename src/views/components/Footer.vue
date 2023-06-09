@@ -60,7 +60,8 @@ const footerLinks = [
     links: [
       {
         icon: "fa fa-phone-square mr-2 text-[#347571]",
-        title: "+91 8530231999",
+        title: "+91 7038235527 || +91 8530251999",
+        // < span > +91 7038235527, +91 8530251999</span >
       },
       {
         icon: "fa fa-envelope mr-2 text-[#347571]",
